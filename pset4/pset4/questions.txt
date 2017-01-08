@@ -1,0 +1,22 @@
+0.  BMP: 16M
+    JPEG: 16M
+    PNG: 16M
+    GIF: 256
+1.  GIF
+2.  Lossy degragades image quality while reducing file sizes. Lossless keeps image quality but have larger file sizes compared to lossy algorithms. 
+3.  JPEG
+4.  First character in the filename is changed into a status that notes the file is deleted. Actual content of the file stays untouched.
+5.  Sanitizing thourgh overwriting the file disk with ascii nul bytes.  
+6.  A header file that specifically defines integer type in terms of width, max and min values.
+7.  It solves portability problems accross different architectures. 
+8.  BYTE: 1, DWORD: 4, LONG: 4, WORD: 2 bytes.
+9.  Hex: 42 4D
+10. bfSize defines the size of the bitmap file in bytes while biSize defines the bytes required by a BITMAPINFOHEADER structure.
+11. biHeight defines the height of the bitmap in pixels. if it's negative, then the origin is the upper-left corner.
+12. biBitCount
+13. User may not have folder creation right in the target directory.
+14. There is only one struct to be read in the specified sizes.
+15. 3
+16. It repositions the file pointer in the file. 
+17. It makes fseek reposition the file pointer in the file relative to the current position of the file pointer. 
+18. TODO

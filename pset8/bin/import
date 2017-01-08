@@ -1,0 +1,61 @@
+#!/usr/bin/env php
+
+<?php
+
+    require("../includes/config.php");
+    
+    if($argc != 2)
+    {
+        printf("Please specify the files to be imported!\n");
+    } 
+    else if(!file_exists($argv[1]))
+    {
+        printf("File does not exist!\n");   
+    }
+    else if(!is_readable($argv[1]))
+    {
+        printf("File does not readable!\n");
+    }
+    else
+    {
+        $file = fopen($argv[1], "r");
+        
+        
+        while(($data = fgetcsv($file)) == true)
+        {
+            $e = explode("\t", $data[0]);
+            
+            $insert = CS50::query("INSERT INTO pset8.places 
+            (country_code,
+            postal_code,
+            place_name,
+            admin_name1,
+            admin_code1,
+            admin_name2,
+            admin_code2,
+            admin_name3,
+            admin_code3,
+            latitude,
+            longitude,
+            accuracy)
+            
+            VALUES
+            
+            (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", 
+            $e[0], $e[1], $e[2], $e[3], $e[4], $e[5], $e[6], $e[7], $e[8], $e[9], $e[10], $e[11]); 
+            
+            // if($insert == true)
+            // {
+            //     printf("Success!\n");
+            // }
+            // else
+            // {
+            //     printf("Failure!\n");
+            // }
+            
+        
+        }
+        fclose($file);
+    }
+    
+?>

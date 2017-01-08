@@ -1,0 +1,25 @@
+0.  It's the longest english word derived. And a disease.
+1.  Returns the resource usage measures for the calling process, children of the calling process and the calling thread.
+2.  16 members.
+3.  Function returns 1 or 0 as a result. We need to change the before and after struct members. Therefore, we pass their addresses into the function.
+4.  The for loop reads the file per character from the start to the end of the file. It reads each character and if it is the end of file character then
+loop finishes. If not, then, it checks whether the character read is alphabetic or an apostrophe not in the first place in the word, if the check returns true 
+then the character is added into the word and the next counter incremented by one and the new index is compared whether it is bigger then the maximum 
+allowed word lenght. If it is more than the allowed word lenght then the rest are ignored until finding a non-alphabetic character or end of file character.
+
+If the character is not alphabetic or an apostrophe not in the first place, then the character is tested for being a digit. If it is, then the rest is ignored
+until finding a non-alphanumeric character. If it is not a digit either, then it may be the end of file character. If not, then, it is checked whether 
+the word index is more than zero, if it is, then the word is ended with an end of string character \0 and word counter is incremented by one. Then, 
+the word is looked up in the dictionary and the decision time is calculated. If it is not found, then the not found counter is incremented by one.
+
+5. fscanf reads per word by checking white spaces therefore makes it impossible to detect digits or non-alphabetic characters within the word 
+and also there is no boundary checking for the file. It may cause buffer overflows.
+
+6.  pointer to a const char means that pointed parameters are immutable. The reason to pass immutable parameters into functions is to 
+prevent unexpected modifications in these pointed parameters.
+
+7.  I used trie which is based on a structs consists of a boolean variable is_word and a pointer to the structure array pointing itself with a size of 27 items.
+I used one struct per one character. 
+8.  I have worked on small dictionaries consists of 4-7 words until I solved all the flaws. Therefore, I got good results at my first attempt.
+9.  I cancelled some controls within load and unload operations. 
+10. I get weird errors with valgrind which shows no memory leaks but finds uninitialized pointers which I could not grasp what it really meant.

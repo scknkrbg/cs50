@@ -1,0 +1,10 @@
+questions.txt
+
+Computer Science 50
+Problem Set 3
+
+0. dimensions can be 3 x 3 at least and 9 x 9 at most. 
+1. multidimensional array.
+2. greet function.
+3. init, draw, move, won. 
+

@@ -1,0 +1,16 @@
+lookup function:
+
+Purpose: Return content types of files by looking up on their paths.
+
+Useful functions:
+1) strcasecmp: string comparison ignoring the char cases. 
+2) strcpy: string is copied into the destionation including the null byte '\0'
+3) strrchr: returns a pointer to the last occurrance of the char c in the string s.
+
+parse function:
+
+Takes line str, abs_path, query. 
+1) strchr : finds a char in a str
+2) strncmp : compare n bytes of two str
+3) strncpy : copy n bytes into dest from src const char.
+4) strstr : locate a substring in a string.

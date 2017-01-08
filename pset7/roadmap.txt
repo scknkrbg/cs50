@@ -1,0 +1,6 @@
+quotes:
+
+1) display form
+    1.a) viewer: quote_form.php
+    1.b) controller: quote.php
+2) 
